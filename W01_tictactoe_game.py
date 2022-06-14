@@ -8,14 +8,6 @@
 4. Assignment Description:
     This is a tic tac toe game program.
 """
-
-# 1. Name: 
-#       Hilmar Orozco
-# 2. Assignment Name: 
-#       CSE_210_tictactoe_solution.py
-# 3. Assignment Description:
-#       This is a tic tac toe game program.
-
 def display_board(board):
     print(f"\n       |       |\n   {board[0]}   |   {board[1]}   |   {board[2]}")
     print(f"       |       |\n-------+-------+-------\n       |       |") 
