@@ -8,14 +8,14 @@
 4. Assignment Description:
     This is a tic tac toe game program.
 """
-def display_board(board):
+def display(board):
     print(f"\n       |       |\n   {board[0]}   |   {board[1]}   |   {board[2]}")
     print(f"       |       |\n-------+-------+-------\n       |       |") 
     print(f"   {board[3]}   |   {board[4]}   |   {board[5]}")
     print(f"       |       |\n-------+-------+-------\n       |       |")
     print(f"   {board[6]}   |   {board[7]}   |   {board[8]}\n       |       |") 
     
-def next_player(player):
+def turn(player):
     if player == "x":
         return "o"
     else:
@@ -30,12 +30,12 @@ def main():
         board[1] == board[4] == board[7] or board[2] == board[5] == board[8] or
         board[0] == board[4] == board[8] or board[2] == board[4] == board[6]):
     
-        display_board(board)
+        display(board)
         position = int(input(f"It is {player}'s turn to choose position: "))
         board[position - 1] = player
-        player = next_player(player)
+        player = turn(player)
         
-    display_board(board)
+    display(board)
     print("We have a winner!") 
 
 main()
